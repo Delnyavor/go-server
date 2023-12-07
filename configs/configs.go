@@ -1,16 +1,15 @@
 package configs
 
 import (
-	"log"
+	// "log"
 	"os"
-
-	"github.com/joho/godotenv"
+	// "github.com/joho/godotenv"
 )
 
 func EnvMongoURI() string {
-	if err := godotenv.Load(); err != nil {
-		log.Fatal("Error loading .env file")
-	}
+	// if err := godotenv.Load(); err != nil {
+	// 	log.Fatal("Error loading .env file")
+	// }
 
 	return os.Getenv("MONGO_URI")
 }
