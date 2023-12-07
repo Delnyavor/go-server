@@ -22,7 +22,7 @@ func EnvMongoURI() string {
 	log.Print(path)
 	fmt.Println(filepath.Join(path))
 
-	if err := godotenv.Load(filepath.Join(path, "go-server/.env")); err != nil {
+	if err := godotenv.Load(filepath.Join(path, ".env")); err != nil {
 		log.Fatal(path)
 	}
 	return os.Getenv("MONGO_URI")
