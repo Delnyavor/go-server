@@ -21,9 +21,6 @@ var Mg *MongoInstance
 
 const dbName = "hrms"
 
-// const mongoURI = "mongodb://localhost:27017/" + dbName
-// const mongoURI = "mongodb+srv://delnyavor:npckaOvvwJC8IZF0@cluster0.yhpupim.mongodb.net/?retryWrites=true&w=majority"
-
 func Connect() error {
 
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*10)
@@ -47,10 +44,6 @@ func Connect() error {
 
 	return nil
 
-}
-
-func EnvMongoURI() {
-	panic("unimplemented")
 }
 
 func Disconnect() {
